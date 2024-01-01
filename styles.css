@@ -1,57 +1,161 @@
-* {
-    box-sizing: border-box;
-  }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
   body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e2e2e2;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    flex-direction: column;
+    min-height: 100vh;
   }
-  
-  header a {
-    color: white;
-    text-decoration: none;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg,
+      #FF3CAC, #784BA0, #2B86C5, #00A0D5, #00D3D5);
+  color: #fff;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex: 1;
+}
+.square {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  animation: squareAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
   }
-  
-  header ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  50% {
+      background-position: 100% 50%;
   }
-  
-  header li {
-    margin: 0 10px;
+  100% {
+      background-position: 0% 50%;
   }
-  
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+}
+
+@keyframes squareAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(0) rotate(0deg);
   }
-  
-  footer {
-    background-color: rgb(76, 76, 76);
-    color: white;
-    text-align: center;
-    padding: 10px;
+  50% {
+      opacity: 0.5;
+      transform: translateY(-50px) rotate(180deg);
   }
-  
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-    }
-  
-    header ul {
-      margin-bottom: 10px;
-    }
+  100% {
+      opacity: 0;
+      transform: translateY(0) rotate(360deg);
   }
+}
+
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.btn {
+  margin: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: black;
+  border-color: black;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  height: 10%;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+  .hero {
+      padding: 80px 0;
+  }
+
+  .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+  }
+
+  .hero p {
+      font-size: 1em;
+      margin-bottom: 20px;
+  }
+
+  .btn {
+      font-size: 1em;
+  }
+
+  .game-card {
+    flex-direction: row;
+    max-width: none;
+}
+
+.game-card img {
+    width: 50%;
+    border-bottom: none;
+    border-right: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+}
+
+.card-content {
+    padding: 15px;
+}
+}
+
