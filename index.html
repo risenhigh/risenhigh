@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>risenhigh</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>risenhigh</title>
+<link rel="stylesheet" href="styles.css"> <!-- External CSS file for styling -->
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h3>risenhigh</h3>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>risenhigh games</h2>
-            <p>Discover exciting games, join the community, and elevate your gaming journey.</p>
-            <p>Know more from us at below platforms:</p>
-            <a href="https://www.youtube.com/@risenhigh" class="btn"><span>Youtube</span></a>
-            <a href="https://twitter.com/risenhighgames" class="btn"><span>X/Twitter</span></a>
-            <a href="https://www.instagram.com/risenhighgames/" class="btn"><span>Instagram</span></a>
+<!-- Top Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <h1 class="logo">risenhigh</h1>
+        <ul class="nav-links">
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#recent-videos">Recent Videos</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 risenhigh. All rights reserved.</p>
-        </div>
-    </footer>
-  
+<!-- Landing Page Section -->
+<section id="landing" class="landing">
+    <h1>Welcome to risenhigh music</h1>
+    <p>Find peace and tranquility through our collection of meditation and yoga music.</p>
+    <a href="#recent-videos" class="btn">Explore Now</a>
+</section>
 
-    <script src="script.js"></script>
+<!-- Recent Videos Section -->
+<section id="recent-videos" class="videos">
+    <h2>Recent Videos</h2>
+    <div class="video-grid">
+        <!-- Replace the placeholder content with dynamic content fetched from YouTube API -->
+        <div class="video">
+            <img src="video-thumbnail.jpg" alt="Video Thumbnail">
+            <h3>Video Title</h3>
+            <p>Description of the video goes here.</p>
+            <a href="#" class="play-btn">▶</a>
+        </div>
+        <div class="video">
+            <img src="video-thumbnail.jpg" alt="Video Thumbnail">
+            <h3>Video Title</h3>
+            <p>Description of the video goes here.</p>
+            <a href="#" class="play-btn">▶</a>
+        </div>
+        <div class="video">
+            <img src="video-thumbnail.jpg" alt="Video Thumbnail">
+            <h3>Video Title</h3>
+            <p>Description of the video goes here.</p>
+            <a href="#" class="play-btn">▶</a>
+        </div>
+        <div class="video">
+            <img src="video-thumbnail.jpg" alt="Video Thumbnail">
+            <h3>Video Title</h3>
+            <p>Description of the video goes here.</p>
+            <a href="#" class="play-btn">▶</a>
+        </div>
+        <!-- Repeat the above block for each video -->
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>We upload soothing meditation music to help you find inner peace.</p>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: updating soon</p>
+            <p>Follow us on <a href="#">Facebook</a> and <a href="#">Instagram</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 risenhigh Music. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
