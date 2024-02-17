@@ -1,14 +1,12 @@
-  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* General Styling */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 
-  body {
-    margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #e2e2e2;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   max-width: 1200px;
@@ -16,146 +14,207 @@
   padding: 0 20px;
 }
 
-header {
-  background-color: #000000;
-  color: #fff;
-  padding: 10px 0;
+/* Landing Page Section */
+.landing {
+  background: url('landing-bg.jpg') no-repeat center center/cover;
+  height: 75vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 10%;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header p {
-  margin: 5px 0 0;
-}
-
-.hero {
   text-align: center;
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(45deg,
-      #FF3CAC, #784BA0, #2B86C5, #00A0D5, #00D3D5);
   color: #fff;
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
-  display: flex;
-  align-items: center;
-  align-items: center;
-  flex: 1;
 }
-.square {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #f7f7f7;
+
+/* Recent Videos Section */
+.videos {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.video {
+  background: #f9f9f9;
+  padding: 20px;
   border-radius: 5px;
-  animation: squareAnimation 3s ease infinite;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-@keyframes gradientAnimation {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
+.video:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes squareAnimation {
-  0% {
-      opacity: 0;
-      transform: translateY(0) rotate(0deg);
-  }
-  50% {
-      opacity: 0.5;
-      transform: translateY(-50px) rotate(180deg);
-  }
-  100% {
-      opacity: 0;
-      transform: translateY(0) rotate(360deg);
-  }
+.video img {
+  width: 100%;
+  border-radius: 5px;
 }
 
+.video h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
 
-.hero h2 {
-  font-size: 3em;
+.video p {
+  font-size: 14px;
+}
+
+.play-btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Footer Section */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-section {
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 40px;
+.footer-section h3 {
+  margin-bottom: 10px;
 }
 
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #666;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+/* Button Styling */
 .btn {
-  margin: 10px;
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  text-decoration: none;
+  background: #007bff;
   color: #fff;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: black;
-  border-color: black;
+  background: #0056b3;
 }
 
-footer {
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  height: 10%;
-}
-
-/* Responsive Styles */
-
+/* Media Queries */
 @media only screen and (max-width: 768px) {
-  .hero {
+  /* Adjust styles for tablets and smaller screens */
+  .landing {
+      height: auto;
+      padding: 100px 0;
+  }
+
+  .videos {
+      padding: 30px 0;
+  }
+
+  .video-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .video {
+      padding: 15px;
+  }
+
+  .video h3 {
+      font-size: 16px;
+  }
+
+  .video p {
+      font-size: 12px;
+  }
+
+  .footer {
+      padding: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjust styles for mobile devices */
+  .landing {
       padding: 80px 0;
   }
 
-  .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+  .video-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .hero p {
-      font-size: 1em;
-      margin-bottom: 20px;
+  .video {
+      padding: 10px;
   }
 
-  .btn {
-      font-size: 1em;
+  .video h3 {
+      font-size: 14px;
   }
 
-  .game-card {
-    flex-direction: row;
-    max-width: none;
+  .video p {
+      font-size: 10px;
+  }
+
+  .footer {
+      padding: 20px 0;
+  }
+}
+/* Add these styles to the existing CSS */
+
+/* Top Navigation Bar */
+.navbar {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
 }
 
-.game-card img {
-    width: 50%;
-    border-bottom: none;
-    border-right: 1px solid #ddd;
-    border-radius: 8px 0 0 8px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-content {
-    padding: 15px;
-}
+.logo {
+  margin: 0;
 }
 
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: #555;
+}
