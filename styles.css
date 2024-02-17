@@ -153,6 +153,62 @@ body {
   }
 }
 
+/* Feedback Section */
+.feedback {
+    background: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feedback h2 {
+    margin-bottom: 20px;
+}
+
+.feedback p {
+    margin-bottom: 30px;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.feedback-form textarea {
+    height: 150px;
+}
+
+.feedback-form button[type="submit"] {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.feedback-form button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+
 @media only screen and (max-width: 480px) {
   /* Adjust styles for mobile devices */
   .landing {
